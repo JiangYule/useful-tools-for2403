@@ -3,7 +3,23 @@ from tkinter import messagebox
 from time import localtime
 import os
 import keyboard
+from configparser import ConfigParser
 
+config = ConfigParser()
+
+
+def default_settings():
+    config.add_section("settings")
+    config.set("settings", "subjects", "语文")
+    config.set("settings", "subjects", "数学")
+    config.set("settings", "subjects", "英语")
+    config.set("settings", "subjects", "道法")
+    config.set("settings", "subjects", "历史")
+    config.set("settings", "subjects", "地理")
+    config.set("settings", "file", "example.docx")
+
+
+data = config.read('data.ini')
 file = docx.Document("晚自习作业.docx")
 file.add_page_break()
 s = localtime()
@@ -23,4 +39,3 @@ try:
     os.system("start 晚自习作业.docx")
 except PermissionError:
     messagebox.showerror(title="错误", message="请关闭其他打开作业文件的软件再重试!")
-
