@@ -8,9 +8,9 @@
 1. 作业创建工具
 2. 随机数抽取工具
 
-### 安装教程
-
-release版敬请期待
+### 使用教程
+ 1. 下载release版
+ 2. 修改配置文件(参见代码使用说明第二条)
 
 ### 代码使用说明
 
@@ -19,9 +19,10 @@ release版敬请期待
  docx keyboard
  `pip install docx`
  `pip install keyboard`
-2.  更改配置文件:
-
-3.  xxxx
+2.  更改配置:
+ 在settings.json文件中修改subjects的科目和path的文件路径
+3. 一点小bug:
+ 如果word为空,本程序也会创建新页面并填写内容,暂未解决
 
 ### 参与贡献
 
