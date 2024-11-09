@@ -11,7 +11,7 @@ def default_settings():
         json.dump(config, fw, ensure_ascii=False, indent=4)
 
 
-default_settings()
+# default_settings()
 with open("settings.json", "r", encoding="utf-8") as fr:
     data = json.load(fr)
 file = Document(data["path"])
